@@ -62,7 +62,7 @@ use std::task::{self, Poll};
 #[cfg_attr(docsrs, doc(alias = "delay_until"))]
 #[track_caller]
 pub fn sleep_until(deadline: Instant) -> Sleep {
-    return Sleep::new_timeout(deadline, trace::caller_location());
+    Sleep::new_timeout(deadline, trace::caller_location())
 }
 
 /// Waits until `duration` has elapsed.
